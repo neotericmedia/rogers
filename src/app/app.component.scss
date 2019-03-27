@@ -1,4 +1,4 @@
-/* -- Material Card Reset -- */
+/* -- Reset -- */
 .mat-card {
   border-radius: 0px;
   box-shadow: 0 !important;
@@ -8,6 +8,8 @@
 .mat-card:not([class*=mat-elevation-z]) {
   box-shadow: 0 0px 0px 0px;
 }
+
+/* -- Global -- */
 .container {
   margin-top: 100px;
   width: 1025px;
@@ -15,122 +17,13 @@
 .cardA {
   padding-bottom: 0;
 }
-
-
-
-
-/* -- Current Weather -- */
-.curWeatherIcon {
-  padding: 20px 0 40px 15px;
-}
-.lrgTemp {
-  font-size: 4em;
-  font-weight: 100;
-  display: block;
-  margin-bottom: -20px;
-}
-.frCast {
-  font-size: .6em;
-  line-height: normal;
-}
-
-
-
-/* -- Search -- */
-.mat-input-element {
-  background: #319ba1 url('./../assets/mglass.png') no-repeat 8px 8px;
-  margin-bottom: -7px;
-}
-input.mat-input-element {
-  margin-top: -.0625em;
-  padding: 4px 0 4px 0;
-  text-indent: 21px;
-}
-.search {
-  border-top: 1px solid #60cacc;
-  border-bottom: 1px solid #60cacc;
-}
-.cityText {
-  line-height: 65.5px;
-  text-indent: 10px;
-  display: block
-}
-
-
-
-/* -- Forecast -- */
-.days {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  border-right: 1px solid #60cacc;
-}
-.days:last-child {
-  border-right: none;
-}
-
-
-
-
-/* -- Right Card Images -- */
 .cardB {
   padding: 0;
 }
-.cardBImg {
-  display: block;
-  width: 100%;
-}
-.bttmNav {
-  background-color: #3bbec0;
-  height: 40px;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -- Media Quiries -- */
+/* -- MQs -- */
 @media (min-width: 1200px) {
   .container {
     width: 1025px;
-  }
-}
-/* -- 7 Columns -- */
-@media (min-width: 768px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 100%;
-    *width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-    max-width: 14.285714285714285714285714285714% !important;
-    flex: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-    max-width: 14.285714285714285714285714285714% !important;
-    flex: none !important;
   }
 }

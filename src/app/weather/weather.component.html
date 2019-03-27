@@ -1,0 +1,38 @@
+<!-- Current Weather -->
+<div class="row">
+  <div class="col-sm-6">
+    <img src="{{ dataService.weather[0].current[0].icon }}" class="curWeatherIcon" />
+  </div>
+  <div class="col-sm-6">
+    <span class="lrgTemp">27&deg;</span>
+    <span class="frCast">
+      Mostly Sunny<br>
+      27&deg;/15&deg;</span>
+  </div>
+</div>
+
+
+
+<!-- Search -->
+<div class="row search">
+  <div class="col-sm-6">
+    <span class="cityText">{{ selectedOption }}</span>
+  </div>
+  <div class="col-sm-6">
+    <mat-form-field class="example-full-width">
+      <input matInput autocomplete="off" [(ngModel)]="selectedValue" [typeahead]="cities" typeaheadOptionField="name"
+        (typeaheadOnSelect)="onSelect($event)" placeholder="">
+    </mat-form-field>
+  </div>
+</div>
+
+
+
+<!-- Forecast -->
+<div class="row seven-cols">
+  <div class="col-md-1 days" *ngFor="let days of dataService.weather[0].upcoming; let i = index">
+    {{ days.day }}
+    <img src="{{ days.icon }}" />
+    {{ days.temp }}&deg;
+  </div>
+</div>

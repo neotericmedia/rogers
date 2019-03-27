@@ -1,0 +1,81 @@
+/* -- Current Weather -- */
+.curWeatherIcon {
+  padding: 20px 0 40px 15px;
+}
+.lrgTemp {
+  font-size: 4em;
+  font-weight: 100;
+  display: block;
+  margin-bottom: -20px;
+}
+.frCast {
+  font-size: .8em;
+  margin-bottom: -20px;
+}
+
+
+
+/* -- Search -- */
+.mat-input-element {
+  background: #319ba1 url('./../../assets/mglass.png') no-repeat 8px 8px;
+  margin-bottom: -7px;
+}
+input.mat-input-element {
+  margin-top: -.0625em;
+  padding: 4px 0 4px 0;
+  text-indent: 21px;
+}
+.search {
+  border-top: 1px solid #60cacc;
+  border-bottom: 1px solid #60cacc;
+}
+.cityText {
+  line-height: 65.5px;
+  text-indent: 10px;
+  display: block
+}
+
+
+
+/* -- Forecast -- */
+.days {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-right: 1px solid #60cacc;
+}
+.days:last-child {
+  border-right: none;
+}
+
+
+
+/* -- 7 Columns -- */
+@media (min-width: 768px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 100%;
+    *width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    max-width: 14.285714285714285714285714285714% !important;
+    flex: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+    max-width: 14.285714285714285714285714285714% !important;
+    flex: none !important;
+  }
+}

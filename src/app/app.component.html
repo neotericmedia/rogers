@@ -1,69 +1,17 @@
 <div class="container">
   <div class="row">
 
-
     <div class="col-sm-12 col-md-6">
       <mat-card class="cardA">
-
-
-        <div class="row">
-          <div class="col-sm-6">
-            <img src="{{ dataService.weather[0].current[0].icon }}" class="curWeatherIcon" />
-          </div>
-          <div class="col-sm-6">
-            <span class="lrgTemp">27&deg;</span>
-            <span class="frCast">
-              Mostly Sunny<br />
-              27&deg;/15&deg;</span>
-          </div>
-        </div>
-
-
-        <!-- <pre class="card card-block card-header mb-3">Selected option: {{ selectedOption }}</pre> -->
-        <div class="row search">
-          <div class="col-sm-6">
-            <span class="cityText">{{ selectedOption }}</span>
-          </div>
-          <div class="col-sm-6">
-            <mat-form-field class="example-full-width">
-              <input matInput autocomplete="off" [(ngModel)]="selectedValue" [typeahead]="cities"
-                typeaheadOptionField="name" (typeaheadOnSelect)="onSelect($event)" placeholder="">
-            </mat-form-field>
-          </div>
-        </div>
-
-
-        <div class="row seven-cols">
-          <div class="col-md-1 days" *ngFor="let days of dataService.weather[0].upcoming; let i = index">
-            {{ days.day }}
-            <img src="{{ days.icon }}" />
-            {{ days.temp }}&deg;
-          </div>
-        </div>
-
-        <!-- <span>{{ weather }}</span> -->
-        <!-- <span>{{getWeather ? getWeather.upcoming.temp : days.temp }}</span> -->
-
+        <app-weather></app-weather>
       </mat-card>
     </div>
-
-
 
     <div class="col-sm-12 col-md-6">
       <mat-card class="cardB">
-
-
-        <carousel>
-          <slide *ngFor="let slide of slides; let index=index">
-            <img [src]="slide.image" alt="first slide" class="cardBImg">
-          </slide>
-        </carousel>
-        <div class="bttmNav"></div>
-
-
+        <app-gallery></app-gallery>
       </mat-card>
     </div>
-
 
   </div>
 </div>

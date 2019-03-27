@@ -12,10 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DataService } from './data.service';
+import { WeatherComponent } from './weather/weather.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    WeatherComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
