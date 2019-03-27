@@ -5,7 +5,7 @@
   background-color: #3bbec0;
   color: #fff;
 }
-.mat-card:not([class*=mat-elevation-z]) {
+.mat-card:not([class*="mat-elevation-z"]) {
   box-shadow: 0 0px 0px 0px;
 }
 
@@ -26,4 +26,86 @@
   .container {
     width: 1025px;
   }
+}
+
+
+
+
+
+/* o-accordion component file */
+.o-accordion {
+  border-top: 1px solid #000;
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__section {
+    border: 1px solid #000;
+    border-top: 0;
+  }
+}
+
+/* m-revealer component file */
+.m-revealer {
+  &__trigger {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+
+    &:hover {
+      cursor: pointer;
+      background: lightgrey;
+    }
+
+    .-open & {
+      background: #000;
+      color: #fff;
+
+      &:hover {
+        background: #1d1f20;
+      }
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      border-top: 10px solid #000;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+
+      .-open & {
+        transform: rotate(180deg);
+        border-top-color: #fff;
+      }
+    }
+  }
+
+  &__content {
+    border-top: 1px solid #000;
+    padding: 10px 20px;
+    display: none;
+
+    .-open & {
+      display: block;
+    }
+  }
+}
+
+/* resets file */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
