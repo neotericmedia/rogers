@@ -1,38 +1,72 @@
 <!-- Current Weather -->
-<div class="row">
+<div *ngFor="let weather of getData; let i = index">
+  <div *ngIf="i === 0">
+
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="{{ weather.current[0].icon }}" class="a-curWeatherIcon" />
+      </div>
+      <div class="col-sm-6">
+        <span class="a-lrgTemp">{{ weather.current[0].main }}&deg;</span>
+        <span class="a-frCast">
+          {{ weather.current[0].description }}<br>
+          27&deg;/15&deg;</span>
+      </div>
+    </div>
+
+    <div class="row a-search">
+      <div class="col-sm-6">
+        <span class="a-cityText">{{ weather.name }}</span>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field class="m-mtFormField">
+          <input class="m-mtFormField__matInputElement" matInput autocomplete="off" [(ngModel)]="selectedValue"
+            [typeahead]="getCities" typeaheadOptionField="name" (typeaheadOnSelect)="onSelect($event, [i])"
+            placeholder="">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row seven-cols">
+      <div class="col-md-1 a-days" *ngFor="let days of weather.upcoming; let i = index">
+        {{ days.day }}
+        <img src="{{ days.icon }}" />
+        {{ days.temp }}&deg;
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- <div class="row">
   <div class="col-sm-6">
-    <img src="{{ dataService.weather[0].current[0].icon }}" class="curWeatherIcon" />
+    <img src="{{ data.weather[0].current[0].icon }}" class="a-curWeatherIcon" />
   </div>
   <div class="col-sm-6">
-    <span class="lrgTemp">27&deg;</span>
-    <span class="frCast">
+    <span class="a-lrgTemp">27&deg;</span>
+    <span class="a-frCast">
       Mostly Sunny<br>
       27&deg;/15&deg;</span>
   </div>
 </div>
 
-
-
-<!-- Search -->
-<div class="row search">
+<div class="row a-search">
   <div class="col-sm-6">
-    <span class="cityText">{{ selectedOption }}</span>
+    <span class="a-cityText">{{ selectedOption }}</span>
   </div>
   <div class="col-sm-6">
-    <mat-form-field class="example-full-width">
-      <input matInput autocomplete="off" [(ngModel)]="selectedValue" [typeahead]="cities" typeaheadOptionField="name"
-        (typeaheadOnSelect)="onSelect($event)" placeholder="">
+    <mat-form-field class="m-mtFormField">
+      <input class="m-mtFormField__matInputElement" matInput autocomplete="off" [(ngModel)]="selectedValue"
+        [typeahead]="cities" typeaheadOptionField="name" (typeaheadOnSelect)="onSelect($event)" placeholder="">
     </mat-form-field>
   </div>
 </div>
 
-
-
-<!-- Forecast -->
 <div class="row seven-cols">
-  <div class="col-md-1 days" *ngFor="let days of dataService.weather[0].upcoming; let i = index">
+  <div class="col-md-1 a-days" *ngFor="let days of data.weather[0].upcoming; let i = index">
     {{ days.day }}
     <img src="{{ days.icon }}" />
     {{ days.temp }}&deg;
   </div>
-</div>
+</div> -->

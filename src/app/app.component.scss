@@ -1,111 +1,56 @@
-/* -- Reset -- */
-.mat-card {
-  border-radius: 0px;
-  box-shadow: 0 !important;
-  background-color: #3bbec0;
-  color: #fff;
-}
-.mat-card:not([class*="mat-elevation-z"]) {
-  box-shadow: 0 0px 0px 0px;
-}
-
 /* -- Global -- */
-.container {
+.o-wrapper {
   margin-top: 100px;
   width: 1025px;
+
+  &__cardA, &__cardB {
+    color: #fff;
+    box-shadow: 0 !important;
+    border-radius: 0px;
+    background-color: #3bbec0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  &__cardA::after, &__cardB::after {
+    content: "";
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  &__cardA:hover, &__cardB:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.01, 1.01);
+  }
+  &__cardA:hover::after, &__cardB:hover::after {
+    opacity: 1;
+  }
+  &__cardA {
+    padding-bottom: 0;
+  }
+  &__cardB {
+    padding: 0;
+  }
 }
-.cardA {
-  padding-bottom: 0;
-}
-.cardB {
-  padding: 0;
-}
+
+
 
 /* -- MQs -- */
 @media (min-width: 1200px) {
-  .container {
+  .o-wrapper {
     width: 1025px;
   }
 }
 
 
 
-
-
-/* o-accordion component file */
-.o-accordion {
-  border-top: 1px solid #000;
-  max-width: 600px;
-  margin: 0 auto;
-
-  &__section {
-    border: 1px solid #000;
-    border-top: 0;
-  }
+/* -- Reset -- */
+mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0), 0 1px 1px 0 rgba(0, 0, 0, 0), 0 1px 3px 0 rgba(0, 0, 0, 0);
 }
-
-/* m-revealer component file */
-.m-revealer {
-  &__trigger {
-    display: grid;
-    grid-template-columns: 1fr 50px;
-
-    &:hover {
-      cursor: pointer;
-      background: lightgrey;
-    }
-
-    .-open & {
-      background: #000;
-      color: #fff;
-
-      &:hover {
-        background: #1d1f20;
-      }
-    }
-  }
-
-  &__heading {
-    margin: 0;
-    padding: 10px 20px;
-  }
-
-  &__icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::before {
-      content: "";
-      display: block;
-      height: 0;
-      width: 0;
-      border-top: 10px solid #000;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-
-      .-open & {
-        transform: rotate(180deg);
-        border-top-color: #fff;
-      }
-    }
-  }
-
-  &__content {
-    border-top: 1px solid #000;
-    padding: 10px 20px;
-    display: none;
-
-    .-open & {
-      display: block;
-    }
-  }
+:host/deep/ .mat-form-field-underline {
+  height: 0px !important;
 }
-
-/* resets file */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:host/deep/ .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #3f8e8f;
 }

@@ -14,8 +14,8 @@ export class DataService {
       'current': [
         {
           'id': 800,
-          'main': 'Clear',
-          'description': 'clear sky',
+          'main': '27',
+          'description': 'Partly Cloudy',
           'icon': './assets/partly-cloudy.png'
         }
       ],
@@ -63,9 +63,9 @@ export class DataService {
       'current': [
         {
           'id': 800,
-          'main': 'Clear',
+          'main': '24',
           'description': 'Sunny',
-          'icon': './assets/sun-dk.png'
+          'icon': './assets/sun-wh.png'
         }
       ],
       'upcoming': [

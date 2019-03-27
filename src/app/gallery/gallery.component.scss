@@ -1,32 +1,37 @@
-.cardBImg {
-  display: block;
-  width: 100%;
+.m-carousel {
+  &__slider {
+    height: 275px;
+  }
+  &__slider img {
+    display: block;
+    margin-top: -40px;
+    width: 100%;
+  }
 }
-.bttmNav {
+
+
+
+.m-bttmNav {
   background-color: #3bbec0;
   height: 60px;
-}
-.leftArrow {
-  width: 63px;
-  height: 60px;
-  position: absolute;
-  left: 0px;
-  border-right: 1px solid #60cacc;
-  background: url('./../../assets/left-arrow.png') no-repeat 20px 20px;
-}
-.center {
-  width: 120px;
-  height: 60px;
-  position: absolute;
-  left: 50%;
-  margin-left: -60px;
-  background: url('./../../assets/center-nav.png') no-repeat center 25px;
-}
-.rightArrow {
-  width: 63px;
-  height: 60px;
-  position: absolute;
-  right: 0px;
-  border-left: 1px solid #60cacc;
-  background: url('./../../assets/right-arrow.png') no-repeat 20px 20px;
+
+  &__leftArrow, &__rightArrow, &__center { position: absolute }
+  &__leftArrow, &__rightArrow { width: 63px; height: 60px }
+  &__leftArrow {
+    left: 0px;
+    border-right: 1px solid #60cacc;
+    background: url("./../../assets/left-arrow.png") no-repeat 20px 20px;
+  }
+  &__center {
+    width: 120px;
+    height: 60px;
+    left: 50%;
+    margin-left: -60px;
+    background: url("./../../assets/center-nav.png") no-repeat center 25px;
+  }
+  &__rightArrow {
+    right: 0px;
+    border-left: 1px solid #60cacc;
+    background: url("./../../assets/right-arrow.png") no-repeat 20px 20px;
+  }
 }
