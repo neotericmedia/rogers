@@ -11,6 +11,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Toronto',
+      'image': './assets/img1.jpg',
       'current': [
         {
           'id': 800,
@@ -62,6 +63,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Edmonton',
+      'image': './assets/img2.jpg',
       'current': [
         {
           'id': 800,
@@ -113,6 +115,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Calgary',
+      'image': './assets/img3.jpg',
       'current': [
         {
           'id': 800,
@@ -164,6 +167,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Ottawa',
+      'image': './assets/img4.jpg',
       'current': [
         {
           'id': 800,

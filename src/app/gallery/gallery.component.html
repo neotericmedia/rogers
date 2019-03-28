@@ -1,9 +1,6 @@
 <carousel class="m-carousel">
   <slide *ngFor="let slide of slides; let index=index" class="m-carousel__slider">
-    <img [src]="slide.image" alt="first slide">
-    <div class="carousel-caption d-none d-md-block">
-      <h3>{{ city }}</h3>
-    </div>
+    <img style="height: 100%;" src="{{ city }}" />
   </slide>
 </carousel>
 

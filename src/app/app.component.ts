@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
 
   getCity(val) {
     this.city = val;
+    console.log('city is', val);
   }
 
   ngOnInit() {
