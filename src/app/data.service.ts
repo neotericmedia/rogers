@@ -167,7 +167,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Ottawa',
-      'image': './assets/img4.jpg',
+      'image': './assets/img3.jpg',
       'current': [
         {
           'id': 800,
@@ -219,6 +219,7 @@ export class DataService {
     {
       'id': 1907296,
       'name': 'Montreal',
+      'image': './assets/img4.jpg',
       'current': [
         {
           'id': 800,
