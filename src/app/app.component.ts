@@ -1,5 +1,6 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -30,8 +31,22 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  getData: any = [];
+  getCities: any = [];
+  city: string;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
+
+  getCity(val) {
+    this.city = val;
+  }
+
+  ngOnInit() {
+    this.dataService.weather.map(name => {
+      this.getData.push(name);
+      this.getCities.push(name.name);
+    });
+  }
 
 }

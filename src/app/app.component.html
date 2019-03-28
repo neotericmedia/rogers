@@ -3,13 +3,13 @@
 
     <div class="col-sm-12 col-md-6">
       <mat-card [@cardA]="cardA" class="o-wrapper__cardA">
-        <app-weather></app-weather>
+        <app-weather [getData]="getData" [getCities]="getCities" (selectCity)='getCity($event)'></app-weather>
       </mat-card>
     </div>
 
     <div class="col-sm-12 col-md-6">
       <mat-card [@cardB]="cardB" class="o-wrapper__cardB">
-        <app-gallery></app-gallery>
+        <app-gallery [city]="city"></app-gallery>
       </mat-card>
     </div>
 

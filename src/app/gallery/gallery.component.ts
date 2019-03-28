@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 
 @Component({
@@ -9,18 +9,13 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
     { provide: CarouselConfig, useValue: { interval: 1500, noPause: true, showIndicators: false } }
   ]
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent {
+  @Input() city: string;
 
-  // images for slider, right card
   slides = [
-    { image: 'assets/img1.jpg' },
-    { image: 'assets/img1.jpg' },
     { image: 'assets/img1.jpg' },
   ];
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
