@@ -12,6 +12,7 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel';
 export class GalleryComponent {
   @Input() city: string;
 
+  // Default image
   slides = [
     { image: 'assets/img1.jpg' },
   ];

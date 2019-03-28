@@ -10,26 +10,34 @@ import { TypeaheadMatch } from 'ngx-bootstrap/typeahead/typeahead-match.class';
 export class WeatherComponent {
   @Input() getData: any = [];
   @Input() getCities: any = [];
-  @Output() selectCity: EventEmitter<any> = new EventEmitter<any>();
+  @Output() selectedCity: EventEmitter<any> = new EventEmitter<any>();
 
   selectedOption: string;
   getImageVal = [];
 
+  // inject data service
   constructor(private dataService: DataService) { }
 
   // method to match typeahead results to data
   onSelect(event: TypeaheadMatch): void {
+    // selected city
     this.selectedOption = event.item;
+    // map to data
     this.dataService.weather.map(name => {
+      // if the selection matches payload name
       if (this.selectedOption.includes(name.name)) {
+        // reset getData array (on second call)
         this.getData = [];
+        // push selected payload to getData
         this.getData.push(name);
+        // reset getImage array (on second call)
         this.getImageVal = [];
+        // push selected image name to getImage
         this.getImageVal.push(name.image);
       }
     });
-    this.selectCity.emit(this.getImageVal);
-    console.log(this.getImageVal);
+    // emit getImage to parent inturn passes to gallery child component
+    this.selectedCity.emit(this.getImageVal);
   }
 
 }

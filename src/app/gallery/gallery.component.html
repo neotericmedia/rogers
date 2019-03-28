@@ -1,3 +1,4 @@
+<!-- Carousel Nav -->
 <carousel class="m-carousel">
   <slide *ngFor="let slide of slides; let index=index" class="m-carousel__slider">
     <div *ngIf="city === undefined;else other_images"><img [src]="slides[0].image" /></div>
@@ -5,6 +6,7 @@
   </slide>
 </carousel>
 
+<!-- Bottom Nav -->
 <div class="m-bttmNav">
   <div class="m-bttmNav__leftArrow"></div>
   <div class="m-bttmNav__center"></div>
