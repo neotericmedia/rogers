@@ -2,14 +2,12 @@
 .a-curWeatherIcon {
   padding: 20px 0 40px 15px;
 }
-
 .a-lrgTemp {
   font-size: 4em;
   font-weight: 100;
   display: block;
   margin-bottom: -20px;
 }
-
 .a-frCast {
   font-size: 0.8em;
   margin-bottom: 20px;
@@ -29,12 +27,10 @@
     z-index: 5001;
   }
 }
-
 .a-search {
   border-top: 1px solid #60cacc;
   border-bottom: 1px solid #60cacc;
 }
-
 .a-cityText {
   line-height: 65.5px;
   text-indent: 10px;
@@ -51,7 +47,6 @@
   border-right: 1px solid #60cacc;
   z-index: 0;
 }
-
 .a-days:last-child {
   border-right: none;
 }
@@ -60,7 +55,6 @@
 
 /* -- 7 Columns -- */
 @media (min-width: 768px) {
-
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -68,9 +62,7 @@
     *width: 100%;
   }
 }
-
 @media (min-width: 992px) {
-
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -80,9 +72,7 @@
     flex: none !important;
   }
 }
-
 @media (min-width: 1200px) {
-
   .seven-cols .col-md-1,
   .seven-cols .col-sm-1,
   .seven-cols .col-lg-1 {
@@ -103,31 +93,27 @@
   animation-fill-mode: both;
 }
 
-/* -- Optional Delays, change values here -- */
+/* -- Optional Delays -- */
 .one {
   -webkit-animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
-
 .two {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
-
 .three {
   -webkit-animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
-
 .four {
   -webkit-animation-delay: 1.6s;
   -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }
-
 .five {
   -webkit-animation-delay: 2.0s;
   -moz-animation-delay: 2.0s;
@@ -139,7 +125,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -149,7 +134,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -160,7 +144,6 @@
   animation-name: fadeIn;
 }
 
-
 /* -- FADE IN DOWN -- */
 @-webkit-keyframes fadeInDown {
   from {
@@ -168,7 +151,6 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -182,7 +164,6 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -236,7 +217,6 @@
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -250,7 +230,6 @@
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
-
   to {
     opacity: 1;
     -webkit-transform: none;
@@ -263,17 +242,13 @@
   animation-name: fadeInLeft;
 }
 
-
 /* --  FADE IN RIGHT -- */
 @-webkit-keyframes fadeInRight {
   from {
-    // opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-
   to {
-    // opacity: 1;
     -webkit-transform: none;
     transform: none;
   }
@@ -281,13 +256,10 @@
 
 @keyframes fadeInRight {
   from {
-    //opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
-
   to {
-    //opacity: 1;
     -webkit-transform: none;
     transform: none;
   }

@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../data.service';
 import { TypeaheadMatch } from 'ngx-bootstrap/typeahead/typeahead-match.class';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-weather',
@@ -17,6 +16,7 @@ export class WeatherComponent {
 
   constructor(private dataService: DataService) { }
 
+  // method to match typeahead results to data
   onSelect(event: TypeaheadMatch): void {
     this.selectedOption = event.item;
     this.selectCity.emit(this.selectedOption);
