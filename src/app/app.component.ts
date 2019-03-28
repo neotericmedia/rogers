@@ -38,12 +38,14 @@ export class AppComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-  getCity(val) {
+  // Get image url emitted from weather child
+  getCityUrl(val) {
     this.city = val;
     console.log('city is', val);
   }
 
   ngOnInit() {
+    // get initial payload, on page load
     this.dataService.weather.map(name => {
       this.getData.push(name);
       this.getCities.push(name.name);
