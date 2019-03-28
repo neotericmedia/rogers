@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
   // Get image url emitted from weather child
   getCityUrl(val) {
     this.city = val;
-    console.log('city is', val);
   }
 
   ngOnInit() {
