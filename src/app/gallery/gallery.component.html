@@ -1,6 +1,7 @@
 <carousel class="m-carousel">
   <slide *ngFor="let slide of slides; let index=index" class="m-carousel__slider">
-    <img style="height: 100%;" src="{{ city }}" />
+    <div *ngIf="city === undefined;else other_images"><img [src]="slides[0].image" /></div>
+    <ng-template #other_images><img src="{{ city }}" /></ng-template>
   </slide>
 </carousel>
 
