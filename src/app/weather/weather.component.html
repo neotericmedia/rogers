@@ -16,10 +16,10 @@
 
     <!-- search -->
     <div class="row a-search animate fadeInUp one">
-      <div class="col-sm-6">
+      <div class="col-xs-12 col-sm-12 col-lg-6">
         <span class="a-cityText">{{ weather.name }}</span>
       </div>
-      <div class="col-sm-6">
+      <div class="col-xs-12 col-sm-12 col-lg-6">
         <mat-form-field class="m-mtFormField">
           <input class="m-mtFormField__matInputElement" matInput autocomplete="off" [(ngModel)]="selectedValue"
             [typeahead]="getCities" typeaheadOptionField="name" (typeaheadOnSelect)="onSelect($event)"
@@ -30,7 +30,7 @@
 
     <!-- forecast -->
     <div class="row seven-cols">
-      <div class="col-md-1 a-days animate fadeInLeft four" *ngFor="let days of weather.upcoming; let i = index">
+      <div class="col-xs-12 col-sm-12 col-lg-1 a-days animate fadeInLeft four" *ngFor="let days of weather.upcoming; let i = index">
         {{ days.day }}
         <img src="{{ days.icon }}" />
         {{ days.temp }}&deg;
